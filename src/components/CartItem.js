@@ -2,10 +2,14 @@ import React from 'react';
 
 export default function CartItem({ item, onInc, onDec, onDel }) {
   const { product, qty } = item;
+  const publicUrl        = process.env.PUBLIC_URL;
 
   return (
     <div className="cart-item">
-      <img src={product.img} alt={product.name}/>
+      <img
+        src={`${publicUrl}${product.img}`}
+        alt={product.name}
+      />
       <div>
         <h4>{product.name}</h4>
         <p>Unit price: ₹{product.price}</p>

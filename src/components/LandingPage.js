@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {
   const nav = useNavigate();
+  const publicUrl = process.env.PUBLIC_URL;
 
   return (
     <div
       className="landing"
       style={{
-        backgroundImage: `url(/images/bg.jpg)`,
+        backgroundImage: `url(${publicUrl}/images/bg.jpg)`,
         backgroundSize:    'cover',
         backgroundPosition:'center'
       }}
