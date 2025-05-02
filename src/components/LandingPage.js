@@ -1,21 +1,19 @@
-// src/components/LandingPage.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+// ← import the image from src/images
+import bg from '../images/bg.jpg';
 
 export default function LandingPage() {
-  const nav       = useNavigate();
-  const publicUrl = process.env.PUBLIC_URL;
+  const nav = useNavigate();
 
   return (
     <div
       className="landing"
       style={{
-        backgroundImage:  `url(${publicUrl}/images/bg.jpg)`,
+        // Webpack will replace `bg` with the correct URL at build time
+        backgroundImage: `url(${bg})`,
         backgroundSize:    'cover',
         backgroundPosition:'center',
-        backgroundRepeat:  'no-repeat',
-        width:             '100%',
-        height:            '100%'
       }}
     >
       <div className="landing-content">
