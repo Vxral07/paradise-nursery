@@ -1,17 +1,21 @@
+// src/components/LandingPage.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {
-  const nav = useNavigate();
+  const nav       = useNavigate();
   const publicUrl = process.env.PUBLIC_URL;
 
   return (
     <div
       className="landing"
       style={{
-        backgroundImage: `url(${publicUrl}/images/bg.jpg)`,
+        backgroundImage:  `url(${publicUrl}/images/bg.jpg)`,
         backgroundSize:    'cover',
-        backgroundPosition:'center'
+        backgroundPosition:'center',
+        backgroundRepeat:  'no-repeat',
+        width:             '100%',
+        height:            '100%'
       }}
     >
       <div className="landing-content">
